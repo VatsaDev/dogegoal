@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  padding: 10px;
+  background: #e9cc5a;
+  color: #000000;
+}
+
+.header {
+  text-align: center;
+  padding: 200px;
+  background: url("wall.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.center {
+  text-align: center;
+}
+
+a {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.inline {
+  display: inline;
+}
